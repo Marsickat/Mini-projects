@@ -1,5 +1,5 @@
 def is_valid(language, text):
-    eng_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwzyz"
+    eng_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     rus_alpha = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     if language.lower() == "английский":
         for c in text:
@@ -15,13 +15,13 @@ def is_valid(language, text):
 def caesar(direction, language, step, text):
     result = ""
     upper_eng_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lower_eng_aplha = "abcdefghijklmnopqrstuvwzyz"
+    lower_eng_alpha = "abcdefghijklmnopqrstuvwxyz"
     upper_rus_alpha = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
     lower_rus_alpha = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     if language.lower() == "английский":
         alpha = 26
         upper_alpha = upper_eng_alpha
-        lower_alpha = lower_eng_aplha
+        lower_alpha = lower_eng_alpha
     else:
         alpha = 33
         upper_alpha = upper_rus_alpha
