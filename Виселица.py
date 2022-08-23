@@ -1,5 +1,7 @@
 import random
 
+print("Давайте играть в угадайку слов!")
+
 
 def get_word():
     word_list = ["Ладонь", "Пылесос", "Король", "Полдник", "Зеркало", "Табурет", "Красота", "Волк",
@@ -90,7 +92,6 @@ def play(word):
     guessed_letters = []
     guessed_word = []
     tries = 6
-    print("Давайте играть в угадайку слов!")
     while tries != 0:
         guessed = False
         print(display_hangman(tries))
@@ -145,5 +146,10 @@ def play(word):
     print(display_hangman(tries))
     print(*word)
 
-
-play(get_word().upper())
+while True:
+    play(get_word().upper())
+    ask = input("Играем ещё раз? (да/нет)\n")
+    while ask.lower() != "да" and ask.lower() != "нет":
+        ask = "Некорректный ответ. Играем ещё раз? (да/нет)\n"
+    if ask == "нет":
+        break
