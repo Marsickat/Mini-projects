@@ -11,7 +11,7 @@ def get_word(word, hint):
                       "Торпедо", "Тоттенхэм", "Удинезе", "Уотфорд", "Фенербахче", "Фиорентина",
                       "Фулхэм", "Челси", "Шальке", "Штутгард", "Эвертон", "Эльче", "Ювентус"]
     wall_items = ["Вешалка", "Гардина", "Зеркало", "Икона", "Картина", "Ковёр", "Календарь",
-                    "Лампа", "Портрет", "Полка", "Рисунок", "Телевизор", "Фотография", "Часы",]
+                  "Лампа", "Портрет", "Полка", "Рисунок", "Телевизор", "Фотография", "Часы"]
     pocket_items = ["Билет", "Деньги", "Документы", "Жетон", "Ключи", "Кошелёк", "Монета", "Телефон"]
     sport = ["Бадминтон", "Баскетбол", "Биатлон", "Бобслей", "Бокс", "Борьба", "Велоспорт",
              "Волейбол", "Гандбол", "Гимнастика", "Гольф", "Гребля", "Дзюдо", "Кёрлинг",
@@ -74,8 +74,7 @@ def get_word(word, hint):
     if not hint:
         all_list = [football_clubs, wall_items, pocket_items, sport, bathroom_items, russian_cities, female_names,
                     male_names, furniture, musical_instrument, drinks, profession, countries, periodic_table]
-        any = random.choice(all_list)
-        return random.choice(any)
+        return random.choice(random.choice(all_list))
     if hint:
         word = word.capitalize()
         if word in football_clubs:
