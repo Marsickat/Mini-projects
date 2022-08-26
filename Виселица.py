@@ -203,7 +203,7 @@ def play(word):
         word_completion[0] = word[0]
         word_completion[-1] = word[-1]
     show_hint = input("Отобразить подсказку? (да/нет)\n")
-    while show_hint.lower() != "да" and first_last_letters.lower() != "нет":
+    while show_hint.lower() != "да" and show_hint.lower() != "нет":
         show_hint = input("Некорректный ответ. Отобразить подсказку? (да/нет)\n")
     while tries != 0:
         guessed = False
