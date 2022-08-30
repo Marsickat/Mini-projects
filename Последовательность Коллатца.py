@@ -5,7 +5,14 @@ def collatz(number):
         return 3 * number + 1
 
 
-number = int(input("Введите число: "))
+number = ""
+while True:
+    try:
+        number = int(input("Введите число:\n"))
+    except ValueError:
+        print("Вы ввели не число!")
+    if number:
+        break
 print(number)
 while number != 1:
     number = collatz(number)
